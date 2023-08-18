@@ -1,0 +1,51 @@
+:root {
+    --color-dark-purple: #24053e;
+    --color-eucalyptus: #44ffa1;
+
+    --color-grey: #584d62;
+    --color-ghost-white: #fcf8ff;
+    --color-white: #ffffff;
+
+    --ff-head: 'Fraunces', serif;
+    --ff-base: 'Manrope', sans-serif;
+
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+
+    --content-max-width: 34.3rem;
+}
+
+$bp-tablet: 48em; // 768px;
+$bp-desktop: 90em; // 1440px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@include media-screen-min($bp-tablet) {
+    :root {
+        --content-max-width: 69rem;
+    }
+}
+
+@include media-screen-min($bp-desktop) {
+    :root {
+        --content-max-width: 111rem;
+    }
+}

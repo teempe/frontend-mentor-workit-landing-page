@@ -1,0 +1,28 @@
+@mixin set-width-and-center($width) {
+    max-width: $width;
+    margin: 0 auto;
+}
+
+@mixin media-screen-min($value) {
+    @media only screen and (min-width: $value) {
+        @content;
+    }
+}
+
+@mixin clip-circle {
+    clip-path: circle(267vw at 50% calc(100% - 267vw));
+}
+
+.visually-hidden {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}

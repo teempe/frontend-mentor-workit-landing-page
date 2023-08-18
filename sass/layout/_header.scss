@@ -1,0 +1,99 @@
+.header {
+    background-color: var(--color-dark-purple);
+
+    @include clip-circle;
+
+    position: relative;
+    z-index: 2;
+
+    &__content {
+        position: relative;
+        @include set-width-and-center(var(--content-max-width));
+        padding: 3.2rem 0 15.6rem 0;
+
+        display: grid;
+        row-gap: 6.4rem;
+
+        @include media-screen-min($bp-tablet) {
+            padding-bottom: 20.3rem;
+            row-gap: 5.6rem;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: -26.6rem;
+                top: 7.1rem;
+                width: 34.1rem;
+                height: 31.7rem;
+                background: url('../assets/images/bg-pattern-1.svg');
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: -13.3rem;
+                top: 25rem;
+                width: 17.4rem;
+                height: 18.1rem;
+                background: url('../assets/images/bg-pattern-2.svg');
+            }
+        }
+
+        @include media-screen-min($bp-desktop) {
+            padding: 5.6rem 0 32.6rem 0;
+            row-gap: 5.5rem;
+
+            &::before {
+                left: -30.3rem;
+                top: 11.6rem;
+            }
+
+            &::after {
+                right: -21.3rem;
+                top: 31.4rem;
+            }
+        }
+    }
+
+    &__top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 4rem;
+
+        @include media-screen-min($bp-tablet) {
+            padding: 0 12rem 0 12rem;
+            row-gap: 3.9rem;
+        }
+
+        @include media-screen-min($bp-desktop) {
+            padding: 0 24rem 0 24rem;
+            row-gap: 3.7rem;
+        }
+    }
+
+    &__heading {
+        color: var(--color-white);
+        text-align: center;
+
+        & .underline {
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 0.3rem;
+                position: absolute;
+                bottom: 0.4rem;
+                left: 0;
+                background-color: var(--color-eucalyptus);
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.footer {
+    &__content {
+        @include set-width-and-center(var(--content-max-width));
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        gap: 5.4rem;
+        padding-bottom: 6.4rem;
+
+        @include media-screen-min($bp-tablet) {
+            padding-bottom: 12.2rem;
+        }
+
+        @include media-screen-min($bp-desktop) {
+            padding-bottom: 11rem;
+        }
+    }
+}
+
+.social-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2.65rem;
+
+    &__link:link,
+    &__link:visited {
+        font-size: 2.3rem;
+        color: var(--color-grey);
+        transition: color 0.25s ease-out;
+        cursor: pointer;
+    }
+
+    &__link:hover,
+    &__link:active {
+        color: var(--color-dark-purple);
+    }
+}

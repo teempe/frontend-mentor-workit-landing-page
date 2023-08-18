@@ -1,0 +1,92 @@
+.memo {
+    &__content {
+        @include set-width-and-center(var(--content-max-width));
+        padding: 9.9rem 0 7.4rem 0;
+
+        display: grid;
+        grid-template-rows: 22.8rem 1fr;
+        justify-items: center;
+
+        @include media-screen-min($bp-tablet) {
+            padding: 10rem 0 8rem 0;
+            grid-template-rows: 15.1rem 1fr;
+            grid-template-columns: 17.5rem 1fr;
+            justify-items: left;
+        }
+
+        @include media-screen-min($bp-desktop) {
+            padding: 11rem 0 12.2rem 0;
+            grid-template-rows: 17.3rem 1fr;
+            grid-template-columns: 38.2rem 1fr;
+        }
+    }
+
+    &__image {
+        width: 28.1rem;
+        height: 28.1rem;
+
+        @include media-screen-min($bp-tablet) {
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+        }
+
+        @include media-screen-min($bp-desktop) {
+            width: 47.7rem;
+            height: 47.7rem;
+        }
+    }
+
+    &__card {
+        background-color: var(--color-dark-purple);
+        color: var(--color-white);
+        text-align: center;
+        padding: 3.2rem 3.1rem;
+        position: relative;
+
+        @include media-screen-min($bp-tablet) {
+            text-align: left;
+            padding: 4.8rem 5.6rem 5.6rem 5.6rem;
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: 1.3rem;
+                bottom: -10.6rem;
+                width: 22.1rem;
+                height: 21.2rem;
+                background: url('../assets/images/bg-pattern-3.svg');
+            }
+        }
+
+        @include media-screen-min($bp-desktop) {
+            padding: 6.4rem;
+
+            &::after {
+                right: 7.3rem;
+                bottom: -6.2rem;
+            }
+        }
+    }
+
+    &__heading {
+        margin-bottom: 1.6rem;
+
+        @include media-screen-min($bp-tablet) {
+            margin-bottom: 2.4rem;
+        }
+
+        @include media-screen-min($bp-desktop) {
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    &__text {
+        margin-bottom: 2.4rem;
+
+        @include media-screen-min($bp-desktop) {
+            margin-bottom: 3.2rem;
+        }
+    }
+}

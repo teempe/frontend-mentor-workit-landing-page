@@ -1,0 +1,31 @@
+.hero {
+    position: absolute;
+    width: 100%;
+    top: 38.9rem;
+    display: grid;
+    place-content: center;
+    z-index: 3;
+
+    @include media-screen-min($bp-tablet) {
+        top: 39.2rem;
+    }
+
+    @include media-screen-min($bp-desktop) {
+        top: 45.4rem;
+    }
+
+    &__image {
+        width: 29.8rem;
+        height: 17.8rem;
+
+        @include media-screen-min($bp-tablet) {
+            width: 47.9rem;
+            height: 28.7rem;
+        }
+
+        @include media-screen-min($bp-desktop) {
+            width: 71.5rem;
+            height: 42.7rem;
+        }
+    }
+}
